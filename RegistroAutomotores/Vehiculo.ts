@@ -1,32 +1,32 @@
 // GET = Permite leer el valor de una propiedad privada desde fuera de la clase.
 // SET = Permite modificar el valor de una propiedad privada desde fuera de la clase.
 
-export class Vehiculo {
+export class Vehiculo { 
   
-    private patente: string;
-    private marca: string;
-    private modelo:string;
-    private anio: number;
-    private tipoVehiculo:string;
+    protected patente: string;
+    protected marca: string;
+    protected modelo:string;
+    protected anio: number; 
+    protected tipoVehiculo:string;
 
  
     constructor (patente:string, tipoVehiculo:string) {
         this.patente = patente;
         this.tipoVehiculo = tipoVehiculo;
-    }    
+    }     
     
     public getTipoVehiculo(): string { 
         return this.tipoVehiculo;
     } 
-
+    // TIPO VEHICULO
     public setTipoVehiculo(tipoVehiculo:string): void { 
         this.tipoVehiculo = tipoVehiculo;
-    } 
+    }  
 
     // GET
     public getPatente(): string { 
         return this.patente;
-    } 
+    }  
 
     public getAnio(): number {  
         return this.anio;
