@@ -5,9 +5,9 @@ export class RegistroAutomotor {
     private ListaVehiculos: Vehiculo[]; // array que almacena los vehiculos 
  
     // METODOS 
-    constructor (ListaVehiculos:Vehiculo[]) {
+    constructor (ListaVehiculos: Vehiculo[]) {
         this.ListaVehiculos = ListaVehiculos;
-    } 
+    }  
 
     public agregarVehiculo (vehiculo: Vehiculo) : void {
         this.ListaVehiculos.push(vehiculo);
@@ -18,21 +18,21 @@ export class RegistroAutomotor {
 
     public obtenerVehiculo (patente:string): Vehiculo | undefined {
         return this.ListaVehiculos.find (vehiculo => vehiculo.getPatente() == patente ); // encontrar 
-    }  
+    }   
     
-    // Encontrar Vehiculo - Modificar atributos
+    // Encontrar Vehiculo - Modificar atributos 
 
     public modificarVehiculo (patente: string, nuevaMarca: string, nuevoModelo: string, nuevoAnio: number): void {  
         const vehiculo = this.obtenerVehiculo(patente); // Encuentra el vehículo 
             
-        if (vehiculo) { 
+        if (vehiculo) {  
             if (nuevaMarca) vehiculo.setMarca(nuevaMarca); // Modifica la marca 
             if (nuevoModelo) vehiculo.setModelo(nuevoModelo); // Modifica el modelo 
             if (nuevoAnio) vehiculo.setAnio(nuevoAnio); // Modifica el año 
         } else { 
             console.log("Vehículo no encontrado."); 
                }
-        }  
+        }   
 
     public darDeBaja(patente: string): void { 
 
