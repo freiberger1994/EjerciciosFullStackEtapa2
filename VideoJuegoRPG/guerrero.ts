@@ -6,7 +6,7 @@ export class Guerrero extends Personaje {
 
     constructor(nombre:string, nivel:number, puntosDeVida:number, ataque:number, defensa:number, HabilidadUnicaGuerrero: string) { 
       
-      super (nombre, nivel, puntosDeVida, ataque, defensa);
+      super (nombre, nivel, puntosDeVida, ataque, defensa); 
       this.HabilidadUnicaGuerrero = HabilidadUnicaGuerrero;
     }  
 
