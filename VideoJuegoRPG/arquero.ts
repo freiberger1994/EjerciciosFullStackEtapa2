@@ -12,7 +12,7 @@ export class Arquero extends Personaje {
 
         public Atacar(): void {
             console.log("Estoy tirando flechazos"); 
-        }   
+        }    
 
         public lanzarHabilidadUnica(): string { 
             return `${this.nombre} usa su habilidad especial: ${this.HabilidadUnicaArquero}!`;  

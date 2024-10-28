@@ -19,16 +19,17 @@ exports.GuerreroEvolucionado = void 0;
 var guerrero_1 = require("./guerrero");
 var GuerreroEvolucionado = /** @class */ (function (_super) {
     __extends(GuerreroEvolucionado, _super);
-    function GuerreroEvolucionado(nombre, nivel, puntosDeVida, ataque, defensa, HabilidadUnicaGuerrero) {
+    function GuerreroEvolucionado(nombre, nivel, puntosDeVida, ataque, defensa, HabilidadUnicaGuerrero, HabilidadEspecialGuerrero) {
         var _this = _super.call(this, nombre, nivel, puntosDeVida, ataque, defensa, HabilidadUnicaGuerrero) || this;
-        _this.HabilidadUnicaGuerrero = HabilidadUnicaGuerrero;
+        _this.HabilidadEspecialGuerrero = HabilidadEspecialGuerrero;
+        _this.ataque += 32;
         return _this;
     }
     GuerreroEvolucionado.prototype.Atacar = function () {
         console.log(" Estoy pegando un espadazo ");
     };
     GuerreroEvolucionado.prototype.lanzarHabilidadEspecial = function () {
-        return "".concat(this.nombre, " usa su habilidad especial: ").concat(this.HabilidadUnicaGuerrero, "!");
+        return "".concat(this.nombre, " usa su habilidad especial: ").concat(this.HabilidadEspecialGuerrero, "!");
     };
     return GuerreroEvolucionado;
 }(guerrero_1.Guerrero));

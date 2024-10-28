@@ -23,9 +23,9 @@ console.log(arquero.Atacar());
 console.log(arquero.Defender());
 console.log(arquero.lanzarHabilidadUnica());
 // Crear MagoEvolucionado - GuerreroEvolucionado - ArqueroEvolucionado
-var guerreroEvolucionado = new GuerreroEvolucionado_1.GuerreroEvolucionado("Rey Arturo", 200, 50, 75, 45, "Golpe de Aguila");
+var guerreroEvolucionado = new GuerreroEvolucionado_1.GuerreroEvolucionado("Rey Arturo", 200, 50, 75, 45, "Golpe de Aguila", "Giro de espada");
 var magoEvolucionado = new MagoEvolucionado_1.MagoEvolucionado("Gandalf", 202, 55, 80, 32, "Bola Fuego", "Supernova");
-var arqueroEvolucionado = new ArqueroEvolucionado_1.ArqueroEvolucionado("Varus", 210, 55, 82, 34, "Flecha Venenosa");
+var arqueroEvolucionado = new ArqueroEvolucionado_1.ArqueroEvolucionado("Varus", 210, 55, 82, 34, "Flecha Venenosa", "Flecha Expansiva");
 // EJECUTAR ATACAR - DEFENDER - HABILIDADES UNICA/ESPECIAL  
 console.log(magoEvolucionado.Atacar());
 console.log(magoEvolucionado.Defender());

@@ -19,9 +19,9 @@ exports.ArqueroEvolucionado = void 0;
 var arquero_1 = require("./arquero");
 var ArqueroEvolucionado = /** @class */ (function (_super) {
     __extends(ArqueroEvolucionado, _super);
-    function ArqueroEvolucionado(nombre, nivel, puntosDeVida, ataque, defensa, HabilidadUnicaArquero) {
+    function ArqueroEvolucionado(nombre, nivel, puntosDeVida, ataque, defensa, HabilidadUnicaArquero, HabilidadEspecialArquero) {
         var _this = _super.call(this, nombre, nivel, puntosDeVida, ataque, defensa, HabilidadUnicaArquero) || this;
-        _this.HabilidadUnicaArquero = HabilidadUnicaArquero;
+        _this.HabilidadEspecialArquero = HabilidadEspecialArquero;
         _this.ataque += 45;
         return _this;
     }
@@ -29,7 +29,7 @@ var ArqueroEvolucionado = /** @class */ (function (_super) {
         console.log(" Estoy pegando un espadazo ");
     };
     ArqueroEvolucionado.prototype.lanzarHabilidadEspecial = function () {
-        return "".concat(this.nombre, " usa su habilidad especial: ").concat(this.HabilidadUnicaArquero, "!");
+        return "".concat(this.nombre, " usa su habilidad especial: ").concat(this.HabilidadEspecialArquero, "!");
     };
     return ArqueroEvolucionado;
 }(arquero_1.Arquero));
