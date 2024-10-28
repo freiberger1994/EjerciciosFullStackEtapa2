@@ -14,8 +14,8 @@ export class Guerrero extends Personaje {
       console.log(" Estoy pegando un espadazo "); 
     } 
   
-    public habilidadEspecial(): string { 
+    public lanzarHabilidadUnica(): string { 
       return `${this.nombre} usa su habilidad especial: ${this.HabilidadUnicaGuerrero}!`; 
-    }      
+    }       
   
 }

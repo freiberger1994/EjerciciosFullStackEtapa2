@@ -61,9 +61,9 @@ export abstract class Personaje {
      }  
 
     public devolverDatos(): string {
-    return (`Nombre: ${this.nombre}, Nivel:,  ${this.nivel} Vida: ${this.PuntosDeVida}`);
+    return (`Nombre: ${this.nombre}, Nivel: ${this.nivel} Vida: ${this.PuntosDeVida}`);
 
-    }   
+    }    
 
     //public evolucionar
 }
