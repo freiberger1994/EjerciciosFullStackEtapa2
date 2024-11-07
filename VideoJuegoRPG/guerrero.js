@@ -24,7 +24,7 @@ var Guerrero = /** @class */ (function (_super) {
         _this.HabilidadUnicaGuerrero = HabilidadUnicaGuerrero;
         return _this;
     }
-    Guerrero.prototype.Atacar = function () {
+    Guerrero.prototype.atacar = function () {
         console.log(" Estoy pegando un espadazo ");
     };
     Guerrero.prototype.lanzarHabilidadUnica = function () {

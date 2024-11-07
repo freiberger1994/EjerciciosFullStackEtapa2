@@ -8,9 +8,9 @@ export class Arquero extends Personaje {
     constructor (nombre:string, nivel:number, puntosDeVida:number, ataque:number, defensa:number, HabilidadUnicaArquero: string) {  
             super (nombre, nivel, puntosDeVida, ataque, defensa); 
             this.HabilidadUnicaArquero = HabilidadUnicaArquero;
-        }    
+        }     
 
-        public Atacar(): void {
+        public atacar(): void {
             console.log("Estoy tirando flechazos"); 
         }    
 

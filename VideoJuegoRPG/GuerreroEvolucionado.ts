@@ -12,7 +12,7 @@ export class GuerreroEvolucionado extends Guerrero {
       this.ataque += 32;
     }   
 
-    public Atacar(): void { 
+    public atacar(): void { 
       console.log(" Estoy pegando un espadazo ");    
     } 
   

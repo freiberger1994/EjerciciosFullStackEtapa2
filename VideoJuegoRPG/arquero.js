@@ -24,7 +24,7 @@ var Arquero = /** @class */ (function (_super) {
         _this.HabilidadUnicaArquero = HabilidadUnicaArquero;
         return _this;
     }
-    Arquero.prototype.Atacar = function () {
+    Arquero.prototype.atacar = function () {
         console.log("Estoy tirando flechazos");
     };
     Arquero.prototype.lanzarHabilidadUnica = function () {

@@ -11,9 +11,9 @@ export class Mago extends Personaje {
         this.habilidadUnicaMago = HabilidadUnicaMago; 
     }    
 
-    public Atacar(): void {
+    public atacar(): void {
         console.log(" Estoy tirando un hechizo "); 
-    } 
+    }  
 
     public lanzarHabilidadUnica(): string {
         return `${this.nombre} lanza un hechizo usando ${this.habilidadUnicaMago}`;

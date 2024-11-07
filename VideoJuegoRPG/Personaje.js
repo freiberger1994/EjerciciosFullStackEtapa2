@@ -3,8 +3,6 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.Personaje = void 0;
 var Personaje = /** @class */ (function () {
-    //protected habilidad:Habilidad;
-    //protected puedeEvolucionar:boolean;
     function Personaje(nombre, nivel, PuntosDeVida, ataque, defensa) {
         this.nombre = nombre;
         this.nivel = nivel;
@@ -13,7 +11,7 @@ var Personaje = /** @class */ (function () {
         this.defensa = defensa;
     }
     // Metodo DEFENDER
-    Personaje.prototype.Defender = function () {
+    Personaje.prototype.defender = function () {
         console.log("El personaje esta defendiendo");
     };
     Personaje.prototype.getNombre = function () {

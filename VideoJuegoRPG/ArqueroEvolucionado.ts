@@ -12,9 +12,9 @@ export class ArqueroEvolucionado extends Arquero {
       this.ataque += 45;
     }     
 
-    public Atacar(): void { 
+    public atacar(): void { 
       console.log(" Estoy pegando un espadazo "); 
-    }   
+    }    
    
     public lanzarHabilidadEspecial(): string {  
       return `${this.nombre} usa su habilidad especial: ${this.HabilidadEspecialArquero}!`;   

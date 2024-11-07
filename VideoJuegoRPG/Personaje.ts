@@ -8,10 +8,6 @@ export abstract class Personaje {
     protected ataque:number;
     protected defensa:number; 
 
-    //protected habilidad:Habilidad;
-    //protected puedeEvolucionar:boolean;
-     
-
     constructor (nombre:string, nivel: number, PuntosDeVida:number, ataque:number, defensa:number) {  
         this.nombre = nombre;
         this.nivel = nivel;
@@ -21,12 +17,12 @@ export abstract class Personaje {
     }        
  
     // Metodo ATACAR 
-    public abstract Atacar(): void 
+    public abstract atacar(): void  
      
     // Metodo DEFENDER
-    public Defender(): void {
+    public defender(): void {
         console.log("El personaje esta defendiendo");
-    } 
+    }  
 
     public getNombre(): string { 
         return this.nombre;
@@ -63,8 +59,7 @@ export abstract class Personaje {
     public devolverDatos(): string {
     return (`Nombre: ${this.nombre}, Nivel: ${this.nivel} Vida: ${this.PuntosDeVida}`);
 
-    }    
+    }     
 
-    //public evolucionar
 }
    
