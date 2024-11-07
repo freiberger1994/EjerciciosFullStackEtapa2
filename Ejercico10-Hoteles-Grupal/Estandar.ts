@@ -1,22 +1,18 @@
-import { Habitacion } from "./Habitacion"
+import { Habitacion } from "./Habitacion";
+import { Servicio } from "./Servicio";
 
-export class Estandar extends Habitacion {
+export class HabitacionEstandar extends Habitacion {
+  constructor(numero: number, precioBase: number) {
+    super(numero, precioBase);
+  } 
 
-private internet: boolean = true;  
-private desayuno: boolean = true;  
+  // Implementación del cálculo de costo total para habitación estándar
+  calcularCostoTotal(): number {
+    let costoTotal = this.precioBase;
+    this.servicios.forEach((servicio) => { // Recorre el array de Servicio y agrega precio al Precio Base
+      costoTotal += servicio.costo; 
+    }); 
+    return costoTotal;   
+  } 
 
-
-constructor (numero:number, precioBase:number, cantidadDias:number) {
-super (numero, precioBase, cantidadDias)
- 
-}
- 
-public calcularCosto (): number {    // COSTO HABITACION ESTANDAR
-
-    let precioTotal =  this.precioBase * this.cantidadDias;
-    return precioTotal;  
-}
-
-// 
- 
 }

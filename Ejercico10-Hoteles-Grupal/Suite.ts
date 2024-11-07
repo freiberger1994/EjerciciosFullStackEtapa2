@@ -1,27 +1,21 @@
-import { Habitacion } from "./Habitacion"
+import { Habitacion } from "./Habitacion";
+import { Servicio } from "./Servicio";
 
 export class Suite extends Habitacion {
+  constructor(numero: number, precioBase: number) { 
+    super(numero, precioBase); 
 
-    private internet: boolean = true;
-    private desayuno: boolean = true;
-    protected spa: boolean = true;
-    protected salaEntrenamiento: boolean = false; 
+    // Agregar servicios gratuitos específicos para suites
+    this.servicios.push(new Servicio("Internet", 0));
+    this.servicios.push(new Servicio("Televisión por cable", 0)); 
+  }  
 
-
-constructor (numero:number, precioBase:number, cantidadDias:number) {
-super (numero, precioBase, cantidadDias)
- 
-} 
-
-
-public calcularCosto (): number {    // COSTO HABITACION ESTANDAR
-
-    let precioTotal =  this.precioBase * 2;
-    return precioTotal;
-
-} 
-
-
-
-
+  // Implementación del cálculo de costo total para suite
+  calcularCostoTotal(): number {
+    let costoTotal = this.precioBase;
+    this.servicios.forEach((servicio) => {
+      costoTotal += servicio.costo;
+    });
+    return costoTotal; 
+  }
 }

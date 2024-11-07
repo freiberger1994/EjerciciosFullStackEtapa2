@@ -1,64 +1,65 @@
 import { Servicio } from "./Servicio";
 
+// Clase abstracta para las habitaciones
 export abstract class Habitacion {
+  protected numero: number;
+  protected estado: string;
+  protected precioBase: number;    // Atraviesa todas las inst de Habitacion 
+  protected servicios: Servicio[] = []; 
 
-    protected numero: number;
-    protected precioBase: number;
-    protected disponible: boolean = true;
-    protected cantidadDias: number;
-    protected listaServicios: string[];   
-    
+  constructor(numero: number, precioBase: number) {
+    this.numero = numero;
+    this.precioBase = precioBase; 
+    this.estado = "disponible";  // definimos estado aca 
+  }  
 
+  // CAMBIAR PRECIO BASE STATIC 
 
-    constructor (numero:number, precioBase:number, cantidadDias:number) {
-        this.numero = numero;
-        this.precioBase = precioBase;  
-        this.cantidadDias = cantidadDias;
-    }  
-  
-    abstract calcularCosto (): number;     
-
-    public determinarServicio(): void {
-
+  reservar(): void {        // PASARLO BOOLEAN
+    if (this.estado == "disponible") {
+      this.estado = "ocupada";
+    } else {
+      console.log(`La habitación ${this.numero} ya está ocupada.`);
     } 
+  } 
 
-    public agregarServicio(servicio: string): void { 
-        this.listaServicios.push(servicio);   
-    }   
-
-    public Reservar (): void {
-        if (this.disponible) {
-            this.disponible = false;
-            console.log("Se reservo la habitacion");
-        } else {
-            console.log("No esta disponible"); 
-        } 
-    } 
-
-    public Liberar (): void {
-        if (!this.disponible) {
-            this.disponible = true;
-            console.log("Se libero la habitacion");
-        } else {
-            console.log("Esta libre la habitacion"); 
-        } 
-    } 
-
-    public getNumero (): number {
-        return this.numero;
+  liberar(): void { 
+    if (this.estado == "ocupada") { 
+      this.estado = "disponible";
+    } else {
+      console.log(`La habitación ${this.numero} ya está disponible.`);
     }
+  } 
 
-    public getPrecioBase (): number {
-        return this.precioBase;
-    }  
+  // Método abstracto para calcular el costo total
+  abstract calcularCostoTotal(): number; 
 
-    public setNumero (numero:number): void {
-        this.numero = numero;
-    } 
+  // Método para agregar un servicio adicional
+  agregarServicio(servicio: Servicio): void {   // CONTROLAR QUE NO EXISTAR EN EL ARREGLO QUE TENEMOS
+    this.servicios.push(servicio);
+  }
 
-    public setPrecioBase (precioBase:number): void {
-        this.precioBase = precioBase;
-    } 
+  // Método para quitar un servicio de habitación
+  quitarServicio(servicioNombre: string): void {
+    this.servicios = this.servicios.filter(         // VER - NO REEMPLAZAR EL SERVICIO QUE YA TENGO 
+      (servicio) => servicio.nombre !== servicioNombre
+    );   
+  }
 
+  // Métodos getter para acceder a los atributos protegidos
+  public getNumero(): number {
+    return this.numero;
+  }
 
+  public getEstado(): string {
+    return this.estado;
+  }
+
+  public getPrecioBase(): number {
+    return this.precioBase;
+  }
+
+  public getServicios(): Servicio[] {
+    return this.servicios;
+  }
 }
