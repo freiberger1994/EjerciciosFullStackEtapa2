@@ -24,7 +24,7 @@ var Mago = /** @class */ (function (_super) {
         _this.habilidadUnicaMago = HabilidadUnicaMago;
         return _this;
     }
-    Mago.prototype.Atacar = function () {
+    Mago.prototype.atacar = function () {
         console.log(" Estoy tirando un hechizo ");
     };
     Mago.prototype.lanzarHabilidadUnica = function () {

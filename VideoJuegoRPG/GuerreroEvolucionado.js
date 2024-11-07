@@ -25,7 +25,7 @@ var GuerreroEvolucionado = /** @class */ (function (_super) {
         _this.ataque += 32;
         return _this;
     }
-    GuerreroEvolucionado.prototype.Atacar = function () {
+    GuerreroEvolucionado.prototype.atacar = function () {
         console.log(" Estoy pegando un espadazo ");
     };
     GuerreroEvolucionado.prototype.lanzarHabilidadEspecial = function () {

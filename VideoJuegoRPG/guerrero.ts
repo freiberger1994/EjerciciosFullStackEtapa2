@@ -10,7 +10,7 @@ export class Guerrero extends Personaje {
       this.HabilidadUnicaGuerrero = HabilidadUnicaGuerrero;
     }  
 
-    public Atacar(): void {
+    public atacar(): void {
       console.log(" Estoy pegando un espadazo "); 
     } 
   

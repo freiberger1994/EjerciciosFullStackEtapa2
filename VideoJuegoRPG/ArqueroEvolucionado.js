@@ -25,7 +25,7 @@ var ArqueroEvolucionado = /** @class */ (function (_super) {
         _this.ataque += 45;
         return _this;
     }
-    ArqueroEvolucionado.prototype.Atacar = function () {
+    ArqueroEvolucionado.prototype.atacar = function () {
         console.log(" Estoy pegando un espadazo ");
     };
     ArqueroEvolucionado.prototype.lanzarHabilidadEspecial = function () {
